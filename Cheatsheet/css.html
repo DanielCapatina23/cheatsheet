@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FontEnd CheatSheet | CSS</title>
+</head>
+<body>
+    <header class="header">
+        <h1>FrontEnd CheatSheet</h1>
+        <nav class="topnav">
+            <ul>
+                <li id="htmltwo"><a href="index.html">HTML</a></li>
+                <li id="csstwo"><a href="css.html">CSS</a></li>
+                <li id="javaone"><a href="java.html">JavaScript</a></li>
+            </ul>
+        </nav>
+    </header>
+    <aside>
+        <h2>Content</h2>
+        <ul>
+            <li><a href="#select">Selectors</a></li>
+            <li><a href="#fontprop">Font Properties</a></li>
+            <li><a href="#textprop">Text Properties</a></li>
+            <li><a href="#backprop">Background Properties</a></li>
+            <li><a href="#boxprop">Box Property</a></li>
+            <li><a href="#shadowprop">Shadow Property</a></li>
+            <li><a href="#gradient">Gradient</a></li>
+            <li><a href="#borprop">Border Properties</a></li>
+            <li><a href="#classprop">Classification Properies</a></li>
+            <li><a href="#cssfunc">CSS Functions</a></li>
+        </ul>
+    </aside>
+    <section class="tables" id="select">
+        <h2>Selectors</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Basic Selectors</th>
+                    <th>Description</th>
+                    <th>Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Universal</td>
+                    <td>Selects all elements on the pages.</td>
+                    <td class="code">*{property:value;}</td>
+                </tr>
+                <tr>
+                    <td>Type</td>
+                    <td>Selects all HTML tag/element of given type in your document.</td>
+                    <td class="code">p {property:value;}</td>
+                </tr>
+                <tr>
+                    <td>Id</td>
+                    <td>Selects an element based on the value of its unique id attribute</td>
+                    <td class="code">#id {property:value;}</td>
+                </tr>
+                <tr>
+                    <td>Class</td>
+                    <td>Selects all elements in the document that have the given class attribute.</td>
+                    <td class="code">.class {property:value;}</td>
+                </tr>
+                <tr>
+                    <td>Attribute</td>
+                    <td>Selects all elements that have a specified attribute.</td>
+                    <td class="code">a[attribute=value] {property:value;}</td>
+                </tr>
+                <tr>
+                    <td>Combinators</td>
+                    <td>Complex selectors consisting of more than one selectors having some relationship between them.</td>
+                    <td class="code">selector1 selector2/ selector 1+selector2 / selector 1> selector 2 {property: value;}</td>
+                </tr>
+                <tr>
+                    <td>Pseudo</td>
+                    <td>Define the special state of an element to add an effect to an existing element based on its states.</td>
+                    <td class="code">selector: pseudo-class{<br>
+                        property: value;<br>
+                        }</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="tables" id="fontprop">
+        <h2>Font Properties</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Font-family</td>
+                    <td>Specifies the font family to be used for the element’s text content.</td>
+                    <td class="code">font-family:<br>
+                        family-name |generic-family |initial |inherit;</td>
+                </tr>
+                <tr>
+                    <td>Font-style</td>
+                    <td>Styles the text content in a normal, italic, or oblique face from its font-family.</td>
+                    <td class="code">font-style:<br>
+                        normal |italic |oblique |initial |inherit;</td>
+                </tr>
+                <tr>
+                    <td>Font-variant</td>
+                    <td>Converts all lowercase letters into uppercase letters.</td>
+                    <td class="code">font-variant:<br>
+                        normal| small caps | initial;</td>
+                </tr>
+                <tr>
+                    <td>Font-weight</td>
+                    <td>Specifies thickness or weight of the font</td>
+                    <td class="code">font-weight:<br>
+                        normal| bold |number |initial |inherit |unset;</td>
+                </tr>
+                <tr>
+                    <td>Font-size</td>
+                    <td>Specifies the size of the text in HTML document.</td>
+                    <td class="code">	font-size:<br>
+                        small |medium |large |initial |inherit;</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="tables" id="textprop">
+        <h2>Text Properties</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Text-color</td>
+                    <td>Sets the color of the text.</td>
+                    <td class="code">color: value;</td>
+                </tr>
+                <tr>
+                    <td>Text-alignment</td>
+                    <td>Defines the horizontal alignment of the text.</td>
+                    <td class="code">text-align:<br>
+                        left|right|center|<br>
+                        justify|initial|inherit;</td>
+                </tr>
+                <tr>
+                    <td>Text-decoration</td>
+                    <td>Add or remove text- decorations.</td>
+                    <td class="code">text-decoration:<br>
+                        decoration-type;</td>
+                </tr>
+                <tr>
+                    <td>Text-transformation</td>
+                    <td>Changes the case(uppercase|lowercase) of text.</td>
+                    <td class="code">text-transform:<br>
+                        none|capitalize|uppercase|<br>
+                        lowercase|initial|inherit;</td>
+                </tr>
+                <tr>
+                    <td>Text-indentation</td>
+                    <td>Indents the first line of text block.</td>
+                    <td class="code">	text-indent:<br>
+                        length|initial|inherit;</td>
+                </tr>
+                <tr>
+                    <td>Letter spacing</td>
+                    <td>Specifies spacing between the characters of the text.</td>
+                    <td class="code">letter-spacing:<br>
+                        normal|length|<br>
+                        initial|inherit;</td>
+                </tr>
+                <tr>
+                    <td>Line height</td>
+                    <td>Specifies the space between the lines of the text.</td>
+                    <td class="code">line-height:<br>
+                        normal|number|length|<br>
+                        percentage|initial|inherit;</td>
+                </tr>
+                <tr>
+                    <td>Text-shadow</td>
+                    <td>Adds shadow to the text.</td>
+                    <td class="code">text-shadow:<br>
+                        h-shadow v-shadow<br>
+                        blur-radius<br>
+                        color|none|initial|inherit</td>
+                </tr>
+                <tr>
+                    <td>Word spacing</td>
+                    <td>Specifies space between words of lines.</td>
+                    <td class="code">word-spacing:<br>
+                        normal|length|<br>
+                        initial|inherit;</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="tables" id="backprop">
+        <h2>Background Properties</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Background-color</td>
+                    <td>Specifies the background color of an element.</td>
+                    <td class="code">background-color:<br>
+                        color_name;</td>
+                </tr>
+                <tr>
+                    <td>Background-image</td>
+                    <td>Adds one or more background images to an element.</td>
+                    <td class="code">background-image:<br>
+                        url(‘url’);</td>
+                </tr>
+                <tr>
+                    <td>Background-repeat</td>
+                    <td>Adds or remove repeat the background image both horizontally and vertically.</td>
+                    <td class="code">background-repeat:<br>
+                        repeat|repeat-x|repeat-y|<br>
+                        no-repeat|initial|inherit;</td>
+                </tr>
+                <tr>
+                    <td>Background-position</td>
+                    <td>Specifies the positioning of the image in a certain way.</td>
+                    <td class="code">background-position:<br>
+                        value;</td>
+                </tr>
+                <tr>
+                    <td>Background-origin</td>
+                    <td>Used to adjust the background image of the webpage.</td>
+                    <td class="code">background-origin:<br>
+                        padding-box |border-box<br>
+                        |content-box | initial| inherit;</td>
+                </tr>
+                <tr>
+                    <td>Background-attachment</td>
+                    <td>Specifies the kind of attachment of the background image in its container</td>
+                    <td class="code">background-attachment:<br>
+                        scroll|fixed|local|initial|inherit;</td>
+                </tr>
+                <tr>
+                    <td>Background-clip</td>
+                    <td>Used to define how far the background (color or image) should extend.</td>
+                    <td class="code">background-clip:<br>
+                        border-box|padding-box|content-box|initial|inherit;</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="tables" id="boxprop">
+        <h2>Box Properties</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Margin</td>
+                    <td>Used to set the margin</td>
+                    <td class="code">margin: value;</td>
+                </tr>
+                <tr>
+                    <td>Padding</td>
+                    <td>Specifies the space between the border and the content of the selector.</td>
+                    <td class="code">padding: value;</td>
+                </tr>
+                <tr>
+                    <td>Border</td>
+                    <td>Sets the element’s border width and set the style, and color of an element’s border.</td>
+                    <td class="code">border: value;</td>
+                </tr>
+                <tr>
+                    <td>Width</td>
+                    <td>Used to set an element’s width.</td>
+                    <td class="code">width: value;</td>
+                </tr>
+                <tr>
+                    <td>Height</td>
+                    <td>Used to set an element’s height</td>
+                    <td class="code">height: value;</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="tables" id="shadowprop">
+        <h2>Shadow Properties</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Text shadow</td>
+                    <td>Adds shadow to text.</td>
+                    <td class="code">text-shadow:<br>
+                        h-shadow v-shadow blur-radius color| none |initial | inherit;</td>
+                </tr>
+                <tr>
+                    <td>Box shadow</td>
+                    <td>Gives shadow-like effect to the box or frames of an element.</td>
+                    <td class="code">box-shadow:<br>
+                        h-offset v-offset blur spread<br>
+                        color |none |inset |initial | inherit;</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="tables" id="gradient">
+        <h2>Gradient</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Gradient</th>
+                    <th>Description</th>
+                    <th>Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Linear Gradient</td>
+                    <td>Creates smooth color transitions.</td>
+                    <td class="code">background-image:<br>
+                        linear-gradient(direction, color-stop1, color-stop2, …);</td>
+                </tr>
+                <tr></tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="tables" id="borprop">
+        <h2>Border Properties</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Border Color</td>
+                    <td>Specifies the color of the border of the box. Works only when the border-style property is defined.</td>
+                    <td class="code">border-color:
+                        color-value;</td>
+                </tr>
+                <tr>
+                    <td>Border Style</td>
+                    <td>Sets the style of the border as solid, dotted, rigged, etc.</td>
+                    <td class="code">border-style:
+                        value;</td>
+                </tr>
+                <tr>
+                    <td>Border Width</td>
+                    <td>Sets the width of the border of the element.</td>
+                    <td class="code">border-width:
+                        length |thin |medium |thick |initial |inherit</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="tables" id="classprop">
+        <h2>Classification Properties</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Display</td>
+                    <td>Defines how elements are displayed in the web page.</td>
+                    <td class="code">display:
+                        inline|block|flex|
+                        grid|table|group|none|inherit;</td>
+                </tr>
+                <tr>
+                    <td>Float</td>
+                    <td>Defines flow of content</td>
+                    <td class="code">float:
+                        none|left|right|
+                        initial| inherit;</td>
+                </tr>
+                <tr>
+                    <td>Position</td>
+                    <td>Specifies the positioning method of html entity on the web page.</td>
+                    <td class="code">position:
+                        fixed|static|absolute
+                        |relative |sticky;</td>
+                </tr>
+                <tr>
+                    <td>Clear</td>
+                    <td>Sets the sides of an element where no other floating elements are allowed.</td>
+                    <td class="code">clear:
+                        left|right|both|none;</td>
+                </tr>
+                <tr>
+                    <td>Visibility</td>
+                    <td>Set an element as visible or not.</td>
+                    <td class="code">visibility:
+                        visible|hidden|collapse|initial|inherit;</td>
+                </tr>
+                <tr>
+                    <td>Cursor</td>
+                    <td>Specifies the type or shape of cursor</td>
+                    <td class="code">cursor:
+                        auto|default|pointer|crosshair|help
+                        | e-resize | all-scroll |progress |initial |inherit;</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="tables" id="cssfunc">
+        <h2>CSS Functions</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Function</th>
+                    <th>Description</th>
+                    <th>Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>attr()</td>
+                    <td>Retrieves the value of an attribute of the selected elements</td>
+                    <td class="code">attr( attr_name );</td>
+                </tr>
+                <tr>
+                    <td>calc()</td>
+                    <td>Takes a single mathematical expression as its parameter and performs operations</td>
+                    <td class="code">calc( Expression );</td>
+                </tr>
+                <tr>
+                    <td>max()</td>
+                    <td>Returns the largest number of the given set of comma separated numbers.</td>
+                    <td class="code">max(value 1, value2, value3…)</td>
+                </tr>
+                <tr>
+                    <td>url()</td>
+                    <td>Takes a string URL as a parameter and is used to load images, fonts and content</td>
+                    <td class="code">url( &lt;string&gt; &lt;url-modifier&gt;* )</td>
+                </tr>
+                <tr>
+                    <td>var()</td>
+                    <td>Inserts the value of a custom property. Its name must start with two dashes.</td>
+                    <td class="code">var( custom_property, value )</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>
